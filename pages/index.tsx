@@ -35,12 +35,12 @@ export const getServerSideProps: GetServerSideProps = async () => {
     return {
       props: {
         data,
-      }
+      },
     };
   } catch (error) {
     console.log(error);
     return {
-      notFound: true
+      notFound: true,
     };
   }
 };
