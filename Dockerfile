@@ -2,7 +2,7 @@
 FROM node:16.17-alpine3.15 AS build
 WORKDIR /app
 COPY package.json yarn.lock ./
-RUN yarn install 
+RUN yarn install --frozen-lockfile
 COPY . .
 RUN yarn run  build
 
@@ -14,5 +14,4 @@ LABEL "Project"="Movies Streaming Website"
 COPY --from=build /app/.next /usr/share/nginx/html
 ENV PORT=80
 EXPOSE $PORT
-ENTRYPOINT [ "nginx" ]
-CMD ["-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
