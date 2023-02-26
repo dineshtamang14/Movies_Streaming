@@ -2,9 +2,9 @@ FROM node:16.17-alpine3.15
 LABEL Name="Devlopement"
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
-RUN yarn install 
+RUN yarn install --production
 COPY . .
+RUN yarn run build
 ENV PORT=3000
 EXPOSE $PORT
-ENTRYPOINT [ "yarn" ]
-CMD ["run", "dev"]
+CMD ["yarn", "run", "start"]
