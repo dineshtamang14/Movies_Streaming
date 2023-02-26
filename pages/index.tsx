@@ -1,4 +1,4 @@
-import { GetServerSideProps, NextPage } from 'next';
+import { NextPage } from 'next';
 
 import { MainSlider, ItemSlider, Meta } from '@/components';
 import { getHomeData } from '@/ultis/tmdbApi';
@@ -29,7 +29,7 @@ const Home: NextPage<Props> = ({ data }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps = async () => {
   try {
     const data = await getHomeData();
     return {
@@ -39,9 +39,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     };
   } catch (error) {
     console.log(error);
-    return {
-      notFound: true,
-    };
   }
 };
 
