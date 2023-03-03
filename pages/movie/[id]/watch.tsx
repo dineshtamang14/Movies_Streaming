@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { AboutDetail, ItemList, Meta } from '@/components';
 import { MovieItemProps } from '@/model/movie';
 import { getWatchMovieDetail } from '@/ultis/tmdbApi';
-import { embedMovie, imageOriginal } from '@/ultis/constants';
+import { embedMovie } from '@/ultis/constants';
 
 interface Props {
   data: MovieItemProps;
@@ -16,7 +16,6 @@ const Watch: NextPage<Props> = ({ data, similar }) => {
       <Meta
         title={`${data.title} - Watch - TV Film`}
         description="Watch the movie"
-        image={imageOriginal(data.backdrop_path)}
       />
       <div className="container mt-28 px-6">
         <div className="grid grid-cols-12">

@@ -3,18 +3,17 @@ import { NextPage } from 'next';
 
 interface MetaProps {
   title: string;
-  // description: string;
+  description: string;
   // image: string;
 }
 
-const Meta: NextPage<MetaProps> = ({ title }) => {
+const Meta: NextPage<MetaProps> = ({ title, description }) => {
   return (
     <Head>
-      <title>{title} By Dinesh Tamang</title>
+      <title>{title} | Dinesh Tamang</title>
 
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="theme-color" content="#000000" />
-        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
         <meta name="description" content="Dinesh Tamang student at Mumbai University, currently in fourth year B.E. Computer Science. Technical skill includes programming in python, java, c++, typescript, Node.js and Databases such as
         sql and Nosql. and i am also familiar with Web Development, Kubernetes, Docker, Ansible, terraform, AWS etc." />
         <meta name="keywords" content="Dinesh Tamang, Computer Science, AWS Solution Architect, Cloud Engineer, Backend Engineer, Portfolio website, Dinesh Rambahadur Tamang" />
@@ -29,8 +28,7 @@ const Meta: NextPage<MetaProps> = ({ title }) => {
         <meta property="og:image" content="https://drive.google.com/file/d/10-0Y76IHGnTIA2_5aEli-ey3cBpTUse3/view?usp=sharing" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dinesh Tamang | AWS Solution Architect | Mumbai, India" />
-        <meta name="twitter:description" content="Dinesh Tamang student at Mumbai University, currently in fourth year B.E. Computer Science. Technical skill includes programming in python, java, c++, typescript, Node.js and Databases such as
-        sql and Nosql. and i am also familiar with Web Development, Kubernetes, Docker, Ansible, terraform, AWS etc." />
+        <meta name="twitter:description" content={description} />
 	      <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1130796628997156864/HFXo5m91_400x400.jpg" />
     </Head>
   );

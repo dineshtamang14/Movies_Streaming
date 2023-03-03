@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <Head>
-        <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
       </Head>
       <Navbar />
       <Component {...pageProps} />

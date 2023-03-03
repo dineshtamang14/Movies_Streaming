@@ -31,7 +31,6 @@ const Watch: NextPage<Props> = ({
       <Meta
         title={`${data.name} - Episode ${episodeNumber} - Season ${seasonNumber} - TV Film`}
         description="Watch TV Episode"
-        image={imageOriginal(episode.still_path)}
       />
       <div className="container mt-28 px-6">
         <div className="grid grid-cols-12 gap-6">
