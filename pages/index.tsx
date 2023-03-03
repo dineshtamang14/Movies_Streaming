@@ -11,9 +11,7 @@ const Home: NextPage<Props> = ({ data }) => {
   return (
     <>
       <Meta
-        title="TV Film"
-        description="Watch Movies and TV show"
-        image="/preview.png"
+        title="Movies"
       />
 
       <div style={{ minHeight: '1000px' }} className="">
@@ -28,7 +26,7 @@ const Home: NextPage<Props> = ({ data }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (context: any) => {
   try {
     const data = await getHomeData();
     return {

@@ -3,23 +3,14 @@ import { NextPage } from 'next';
 
 interface MetaProps {
   title: string;
-  description: string;
-  image: string;
+  // description: string;
+  // image: string;
 }
 
-const Meta: NextPage<MetaProps> = ({ title, description, image }) => {
+const Meta: NextPage<MetaProps> = ({ title }) => {
   return (
     <Head>
       <title>{title} By Dinesh Tamang</title>
-      <meta name="title" content={title} />
-      <meta name="description" content={description} />
-      <meta property="image" content={image} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
 
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="theme-color" content="#000000" />
