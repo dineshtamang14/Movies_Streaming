@@ -23,6 +23,7 @@ const Movie = () => {
       <Meta
         title="TV Film - All Movies"
         description="List of all movies of the website"
+        image="/preview.png"
       />
       <ItemView
         loading={loading}

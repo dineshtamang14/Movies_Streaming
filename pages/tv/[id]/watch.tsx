@@ -20,6 +20,7 @@ const Watch: NextPage<Props> = ({ data, seasons }) => {
       <Meta
         title={`${data.name} - Seasons - TV Film`}
         description="View Seasons"
+        image={imageOriginal(data.backdrop_path)}
       />
       <div className="container mt-28 px-6">
         <div className="grid grid-cols-12">
