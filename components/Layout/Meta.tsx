@@ -15,6 +15,11 @@ const Meta: NextPage<MetaProps> = ({ title, description, image }) => {
       <meta name="description" content={description} />
       <meta property="image" content={image} />
 
+      <meta name="theme-color" content="#000000" />
+      <meta name="keywords" content="Dinesh Tamang, Online Movies Streaming, Online Movies" />
+      <meta name="author" content="Dinesh Tamang" />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

@@ -15,12 +15,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <Head>
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="keywords" content="Dinesh Tamang, Online Movies Streaming, Online Movies" />
-        <meta name="author" content="Dinesh Tamang" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Navbar />
       <Component {...pageProps} />
