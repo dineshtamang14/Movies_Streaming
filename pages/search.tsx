@@ -2,6 +2,7 @@ import { GetServerSideProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import ReactPaginate from 'react-paginate';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+
 import { MediaType } from '@/model/movie';
 import { ItemGrid, PageHeader, Meta } from '@/components';
 import { searchAll, searchMovie, searchTV } from '@/ultis/tmdbApi';
@@ -30,6 +31,7 @@ const SearchPage: NextPage<Props> = ({ data, page, type, keyword }) => {
       <Meta
         title={`Movies - Search ${type}`}
         description="Search Movies or TV show by keyword"
+        image="/preview.png"
       />
       <PageHeader media_type={type} isSearchPage keyword={keyword} />
       <div className="container px-6">
