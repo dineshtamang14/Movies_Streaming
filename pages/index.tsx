@@ -11,8 +11,9 @@ const Home: NextPage<Props> = ({ data }) => {
   return (
     <>
       <Meta
-        title="Movies"
+        title="TV Film"
         description="Watch Movies and TV show"
+        image="/preview.png"
       />
 
       <div style={{ minHeight: '1000px' }} className="">
